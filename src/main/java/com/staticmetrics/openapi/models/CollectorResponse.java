@@ -1,7 +1,6 @@
 package com.staticmetrics.openapi.models;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class CollectorResponse implements Serializable {
     private Metric metric;
