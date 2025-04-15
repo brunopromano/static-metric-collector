@@ -4,9 +4,27 @@ import java.io.Serializable;
 import java.util.List;
 
 public class CollectorResponse implements Serializable {
-    private List<String> endpoints;
+    private Metric metric;
+    private Measurement measurement;
 
-    public List<String> getEndpoints() { return endpoints; }
+    public CollectorResponse(Metric metric, Measurement measurement) {
+        this.metric = metric;
+        this.measurement = measurement;
+    }
 
-    public void setEndpoints(List<String> endpoints) { this.endpoints = endpoints; }
+    public Metric getMetric() {
+        return metric;
+    }
+
+    public void setMetric(Metric metric) {
+        this.metric = metric;
+    }
+
+    public Measurement getMeasurement() {
+        return measurement;
+    }
+
+    public void setMeasurement(Measurement measurement) {
+        this.measurement = measurement;
+    }
 }
